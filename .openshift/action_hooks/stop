@@ -1,0 +1,8 @@
+#!/bin/bash
+# The logic to stop your application should be put in this script.
+
+INSTALL_DIR=${OPENSHIFT_HOMEDIR}/app-root/runtime
+
+echo "Stopping elasticsearch."
+kill -QUIT `cat ${INSTALL_DIR}/elasticsearch/run/elasticsearch.pid`
+exit 0
